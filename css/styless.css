@@ -30,6 +30,19 @@
       object-fit: cover;
     }
 
+    .imagens {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .imagens img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
     nav {
       background-color: var(--cor-primaria);
       text-align: center;
@@ -86,6 +99,15 @@
       padding: 30px 20px;
     }
 
+    .navbar-toggler {
+      border-color: var(--cor-primaria);
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+
     .checklist li {
       list-style: none;         
       position: relative;
@@ -123,5 +145,19 @@
 
       form input, form textarea {
         font-size: 14px;
+      }
+
+      .checklist li {
+        list-style: none;         
+        position: relative;
+        padding-left: 1.5em;      
+      }
+
+      .checklist li::before {
+        content: "✔";             
+        position: absolute;
+        left: 0;
+        color: var(--cor-primaria);            
+        font-weight: bold;
       }
     }
